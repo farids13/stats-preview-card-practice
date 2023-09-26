@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca:wght@700&family=Montserrat:wght@600&family=Outfit:wght@100;300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca:wght@700&family=Montserrat:wght@600&family=Outfit:wght@100;300;400;600&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; position:absolute; bottom: 0;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: hsl(233, 47%, 7%);
+    }
+    .mobile{
+      position: absolute;
+      opacity: 0;
+    }
+
+    .cart{
+      overflow: hidden;
+      transition: 0.2s ease;
+      width: 1110px;
+      height: 450px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      display: flex;
+      color: white;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      background-color: hsl(244, 38%, 16%);
+    }
+    .info{
+      padding: 50px 100px 50px 70px;
+      box-sizing: border-box;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 18px;
+    }
+    .info h1 strong{
+      color: hsl(277, 64%, 61%);
+    }
+    div p{
+      font-size: 15px;
+      margin-top: 25px;
+      width: 90%;
+      line-height: 25px;
+    }
+    .more{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 70px;
+      width: 90%;
+    }
+    .more p{
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .more b{
+      text-transform: uppercase;
+      font-size: 25px;
+    }
+    @media screen and (max-width:1110px) {
+      .desktop{
+        position: absolute;
+        opacity: 0;
+      }
+      .mobile{
+        position: relative;
+        opacity: 1;
+        width: fit-content;
+        display: block;
+        width: 100%;
+      }
+      .cart{
+        width: 375px;
+        height: 900px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        /* transform: scale(0.87); */
+      }
+      .attribution{
+        left: 0;
+      }
+      .info{
+        text-align: center;
+        padding: 50px 35px 20px 35px;
+      }
+      .info h1{
+        margin: 0;
+        font-size: 32px;
+        line-height: 36px;
+      }
+      div p{
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 17px;
+        margin-top: 18px;
+        line-height: 30px;
+      }
+      .more{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        margin: 45px;
+      }
+      .more div{
+        margin: 0 0 25px;
+      }
+      .more p{
+        margin-top: 5px;
+        font-size: 16px;
+      }
+    }
+    *{
+      /* outline: 1px solid red; */
+    }
+  </style>
+</head>
+<body>
+
+  <main class="cart">
+    <img src="./images/image-header-mobile.jpg" alt="" class="mobile">
+    <div class="info">
+      <h1>Get <strong>insights</strong> that help your business grow.</h1>
+      <p>
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        experience, and overall efficiency.
+      </p>
+      <div class="more">
+        <div><b>10k+</b> <p>companies</p></div>
+        <div><b>314</b> <p>templates</p></div>
+        <div><b>12m+ </b> <p>queries</p></div>
+      </div>
+    </div>
+    <img src="./images/image-header-desktop.jpg" alt="Image Desktop" class="desktop" >
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>
