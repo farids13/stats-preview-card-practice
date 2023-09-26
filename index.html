@@ -25,7 +25,6 @@
       position: absolute;
       opacity: 0;
     }
-
     .cart{
       overflow: hidden;
       transition: 0.2s ease;
@@ -34,6 +33,7 @@
       box-sizing: border-box;
       border-radius: 10px;
       display: flex;
+      padding: 0px;
       color: white;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
       background-color: hsl(244, 38%, 16%);
@@ -70,6 +70,22 @@
       text-transform: uppercase;
       font-size: 25px;
     }
+    .image{
+      margin: 0px;
+      position: relative;
+      object-fit: cover;
+      order: 1;
+    }
+    .overlay{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: hsl(277, 64%, 41%, 0.6);
+    }
+
+
     @media screen and (max-width:1110px) {
       .desktop{
         position: absolute;
@@ -82,11 +98,16 @@
         display: block;
         width: 100%;
       }
+      .image{
+        order: 1;
+        position: relative;
+      }
       .cart{
         width: 375px;
         height: 900px;
         overflow: hidden;
         display: flex;
+        padding: 0;
         flex-direction: column;
         /* transform: scale(0.87); */
       }
@@ -96,6 +117,7 @@
       .info{
         text-align: center;
         padding: 50px 35px 20px 35px;
+        order: 1;
       }
       .info h1{
         margin: 0;
@@ -122,6 +144,9 @@
         margin-top: 5px;
         font-size: 16px;
       }
+      .image{
+        order: 1;
+      }
     }
     *{
       /* outline: 1px solid red; */
@@ -131,7 +156,11 @@
 <body>
 
   <main class="cart">
-    <img src="./images/image-header-mobile.jpg" alt="" class="mobile">
+    <div class="image">
+      <img src="./images/image-header-desktop.jpg" alt="Image Desktop" class="desktop" >
+      <img src="./images/image-header-mobile.jpg" alt="" class="mobile">
+      <div class="overlay"></div>
+    </div>
     <div class="info">
       <h1>Get <strong>insights</strong> that help your business grow.</h1>
       <p>
@@ -144,7 +173,7 @@
         <div><b>12m+ </b> <p>queries</p></div>
       </div>
     </div>
-    <img src="./images/image-header-desktop.jpg" alt="Image Desktop" class="desktop" >
+   
   </main>
 
   <footer class="attribution">
